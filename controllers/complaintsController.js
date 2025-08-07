@@ -13,13 +13,13 @@ export async function getAllComplaintsC(req, res) {
 
 export async function createComplaintC(req, res) {
     try {
-        const { fullName, category, message } = req.body;
+        const {  category, message } = req.body;
 
-        if (!fullName  || !category || !message) {
+        if (  !category || !message) {
             return res.status(400).json({ error: 'נא למלא את כל השדות' });
         }
 
-        const result = await createComplaint({ fullName, category, message });
+        const result = await createComplaint({ category, message });
         res.status(201).json({ message: 'התלונה נוספה בהצלחה', id: result.insertedId });
     } catch (error) {
         res.status(500).json({ error: 'שגיאה ביצירת התלונה' });

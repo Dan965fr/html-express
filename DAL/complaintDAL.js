@@ -9,10 +9,10 @@ export async function getAllComplaints(){
 }
 
 
-export async function createComplaint(){
+export async function createComplaint({ category, message }){
     const db = await connect();
     const complaint = {
-        catgory,
+        category,
         message,
         create_at: new Date()
     };

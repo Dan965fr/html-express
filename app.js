@@ -2,6 +2,7 @@ import express from 'express';
 import {config} from 'dotenv';
 config();
 import { connect } from './db/connect.js';
+import complaintsRoutes from './routes/complaints.js';
 
 
 const app = express();
@@ -12,10 +13,14 @@ await connect();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-
-
 app.use(express.static('./public'));
+
+app.use('/submit', complaintsRoutes);
+
+
+
+
+
 
 
 
