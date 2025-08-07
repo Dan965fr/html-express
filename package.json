@@ -2,8 +2,10 @@
   "name": "complaints-app",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "directories": {
     "test": "tests"
+    
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
