@@ -1,4 +1,4 @@
-import { getAllComplaints,getComplaintsByCategory,createComplaint } from "../DAL/complaintDAL.js";
+import { getAllComplaints,getComplaintsByCategory,createComplaint,deleteComplaintById } from "../DAL/complaintDAL.js";
 
 
 
@@ -33,5 +33,23 @@ export async function getComplaintsByCategoryC(req, res) {
         res.json(complaints);
     } catch (error) {
         res.status(500).json({ error: 'שגיאה בקבלת תלונות לפי קטגוריה' });
+    }
+}
+
+
+export async function deleteComplainC(req,res){
+    try{
+        const {id} = req.params;
+        if(!id) return res.status(400).json({error:'missing complaint id'});
+
+        const result = await deleteComplaintById(id);
+        if(result.deletedCount === 0){
+            return res.status(404).json({error:'complaint not found'})
+        }
+
+        res.json({msg:'התלונה נמחקה בהצלחה'})
+
+    }catch(error){
+        res.status(500).json({error:"שגיאה במחיקת התלונה" })
     }
 }

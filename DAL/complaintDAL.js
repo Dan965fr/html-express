@@ -23,3 +23,9 @@ export async function getComplaintsByCategory(category) {
     const db = await connect();
     return db.collection('complaints').find({ category }).toArray();
 }
+
+
+export async function deleteComplaintById(id){
+    const db = await connect();
+    return db.collection('complaints').deleteOne({_id:new ObjectId(id)})
+}
