@@ -1,0 +1,115 @@
+body {
+  background-color: rgb(135, 102, 189);
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+/* הסקשן המרכזי */
+section {
+  width: 50%;             
+  margin: 40px auto;     
+  padding: 20px;          
+  text-align: center;     
+  background-color: #f9f9f9; 
+  border-radius: 10px;    
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+  color: black;           
+}
+
+/* כותרת ראשית */
+section h1 {
+  font-size: 36px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+/* פסקאות */
+section p {
+  width: 80%;             
+  margin: 0 auto 20px auto;
+  font-size: 18px;
+}
+
+/* רשימה */
+section ul {
+  color: darkgrey; 
+  width: 80%;
+  margin: 0 auto 20px auto;  
+  padding-left: 0;           
+  font-size: 16px;
+}
+
+/* כפתור */
+section button {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  /* cursor: pointer; */
+  font-size: 16px;
+  /* transition: background-color 0.3s ease; */
+}
+
+
+section button:hover {
+  background-color: #c2185b;
+}
+
+
+
+
+.complaint-form {
+  width: 50%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+.complaint-form h1 {
+  width: 50%;
+  margin: 40px auto;
+  padding: 20px;
+  padding-left: 20%;
+  margin-top: 40px;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+.complaint-form label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.complaint-form select,
+.complaint-form textarea {
+  width: 95%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.complaint-form button {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  /* cursor: pointer; */
+  font-size: 16px;
+  display: block;
+  margin: 20px auto 0 auto;
+}
+
+.complaint-form button:hover {
+  background-color: #c2185b;
+}
+
+

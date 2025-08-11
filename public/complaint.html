@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>טופס תלונה אנונימי</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="/api/submit" method="post" class="complaint-form">
+        <h1>שליחת תלונה אנונימית</h1>
+        <label>קטגוריה:
+            <select name="category" id="category" required>
+                <option value="אוכל">אוכל</option>
+                <option value="ציוד">ציוד</option>
+                <option value="פקודות">פקודות</option>
+                <option value="אחר">אחר</option>
+            </select>
+        </label><br><br>
+
+        <label>תלונה
+           <textarea name="message" id="message" rows="10" cols="200" required></textarea>
+        </label><br><br>
+        <button type="submit">שלח תלונה</button>
+    </form>
+</body>
+</html>
